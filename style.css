@@ -92,7 +92,7 @@
 }
 
 .table th{
-    tetext-align: left; /* Alinea los títulos de las columnas a la izquierda */
+    tetext-align: left; 
     background-color: #f4f4f4;
 }
 
@@ -105,40 +105,40 @@
 }
 
 .big-blue-button {
-    background-color: #007bff; /* Azul */
-    color: white; /* Letras blancas */
-    padding: 15px 30px; /* Tamaño grande */
-    font-size: 18px; /* Tamaño de fuente */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #007bff; 
+    color: white; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
 }
 
  .big-blue-button:hover {
-        background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+        background-color: #0056b3; 
   }
 
 .button-container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente si el contenedor tiene altura */
-    margin-top: 20px; /* Margen superior para separación */
+    justify-content: center;
+    align-items: center; 
+    margin-top: 20px; 
 }
 .blue-button {
-    background-color: #001a4f; /* Azul */
-    color: white; /* Letras blancas */
-    padding: 10px 20px; /* Tamaño grande */
-    font-size: 16px; /* Tamaño de fuente */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #001a4f; 
+    color: white; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 .blue-button i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
+    margin-right: 8px; 
 }
 
 .blue-button:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+    background-color: #0056b3; 
 }
 
 
