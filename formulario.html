@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Plantilla de Caso de Uso</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="titulo">
+            <h1>Plantilla de Caso de Uso</h1>
+        </div>
+
+        <!-- Encabezado -->
+        <section class="cuerpo">
+
+            <div class="form-group">
+                <label class="etiqueta1" for="nocaso">Número de Caso:</label>
+                <input class="espaciol" type="text" id="nocaso" />
+
+                <label class="etiqueta1" for="version">Versión:</label>
+                <input class="espaciol" type="text" id="version" />
+            </div>
+
+
+                <label class="etiqueta" for="nombrecaso">Nombre del caso de Uso:</label>
+                <input class="espaciom" type="text" id="nombrecaso" />
+
+            <div class="form-group">
+                <label class="etiqueta1" for="area">Área</label>
+                <input class="espaciol" type="text" id="area" />
+
+                <label class="etiqueta1" for="fecha">Fecha Elaboración:</label>
+                <input class="espaciol" type="date" id="fecha" />
+            </div>
+
+                <label class="etiqueta" for="descrip">Descripción:</label>
+                <textarea class="espaciog" placeholder="Describa..."></textarea>
+
+                <label class="etiqueta" for="prop">Propósito:</label>
+                <textarea class="espaciog" placeholder="Escriba el Propósito..."></textarea>
+
+            <div class="form-group">
+                <label class="etiqueta1" for="nivel">Nivel:</label>
+                <input class="espaciol" type="text" id="nivel" />
+
+                <label class="etiqueta1" for="interesados">Interesados:</label>
+                <input class="espaciol" type="text" id="interesados" />
+            </div>
+                <br>
+
+                <label class="etiqueta" for="eventod">Evento desencadenador:</label>
+                <input class="espaciom" type="text" id="eventod" />
+
+
+                <!-- Ruta Principal -->
+                <h2><b>Pasos Ruta Principal</b></h2>
+                <table id="dataTable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Pasos Realizados</th>
+                            <th>Información para los Pasos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><textarea class="textarea" placeholder="Describa los pasos realizados..."></textarea></td>
+                            <td><textarea class="textarea" placeholder="Proporcione información adicional para los pasos..."></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                        <div class="button-container">
+                <button id="addButton" class="blue-button" onclick="addRow()">
+                    <i class="fas fa-plus"></i>Agregar fila
+                </button>
+                        </div>
+            <br />
+             <br />
+            
+
+                <button class="blue-button" id="addAltFlowButton" onclick="showAltFlow()">
+                    <i class="fas fa-random"></i> <!-- Icono de flujo alternativo -->
+                    Agregar Flujo Alternativo
+                </button>
+
+                <div id="altFlowContainer" style="display:none; margin-top: 20px;">
+                    <!-- Flujo Alternativo -->
+                    <h3><b>Flujo Alternativo</b></h3>
+                    <label for="condicion">Condición de Activación:</label>
+                    <input type="text" id="condicion" placeholder="Especifique la condición de activación" style="width:100%; margin-bottom: 10px;">
+
+                    <table id="altFlowTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Pasos Realizados</th>
+                                <th>Información para los Pasos</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <button class="blue-button" id="addAltRowButton"  onclick="addAltRow()">
+                        <i class="fas fa-plus"></i>
+                        Agregar Paso Alternativo
+                    </button>
+                </div>
+
+
+                <!-- Demas -->
+
+                <label class="etiqueta" for="pre" style="display:block">Precondiciones:</label>
+                <input class="espaciol" type="text" id="pre" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="post" style="display:block">Postcondiciones:</label>
+                <input class="espaciol" type="text" id="post" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="sup" style="display:block">Suposiciones:</label>
+                <input class="espaciol" type="text" id="sup" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="gar" style="display:block">Garantía de éxito:</label>
+                <input class="espaciol" type="text" id="gar" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="garm" style="display:block">Garantía Minima:</label>
+                <input class="espaciol" type="text" id="garm" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="req" style="display:block">Requerimientos Cumplidos:</label>
+                <input class="espaciol" type="text" id="req" style="display:block; margin-bottom: 10px;" />
+
+                <label class="etiqueta" for="pri" style="display:block">Prioridad:</label>
+                <input class="espaciol" type="text" id="pri" class="input-large" />
+
+                <label class="etiqueta" for="ri" style="display:block">Riesgo:</label>
+                <input class="espaciol" type="text" id="ri" class="input-large" />
+
+
+                <div class="section">
+                    <h2>Aprobación</h2>
+                    <label class="etiqueta" for="ap">Nombre:</label>
+                    <input class="espaciol" type="text" id="ap" class="input-large" />
+                </div>
+
+                <div class="form-group">
+                    <label class="etiqueta1" for="rol">Rol:</label>
+                    <input class="espaciol" type="text" id="rol" />
+
+                    <label class="etiqueta1" for="fechaap">Fecha de Aprobación:</label>
+                    <input class="espaciol" type="date" id="fechaap" />
+                </div>
+
+                 <label class ="etiqueta"for="firma">Firma:</label>
+                <input class="espaciol"type="text" id="firma" class="input-large" />
+            <br />
+
+            <div class="button-container">
+            <button class="big-blue-button" onclick="printDocument()">
+                <i class="fas fa-print"></i> Imprimir Plantilla
+            </button>
+            </div>
+           
+    </div>
+
+            
+
+    <!-- Script para botones  -->
+    <script>
+        function addRow() {
+            const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+            const newRow = table.insertRow();
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+
+            const textArea1 = document.createElement('textarea');
+            textArea1.className = 'textarea';
+            textArea1.placeholder = 'Describa los pasos realizados...';
+            cell1.appendChild(textArea1);
+            const textArea2 = document.createElement('textarea');
+            textArea2.className = 'textarea';
+            textArea2.placeholder = 'Proporcione información adicional para los pasos...';
+            cell2.appendChild(textArea2);
+
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = '<i class="fas fa-trash"></i>'; // Icono de basura
+            deleteButton.onclick = function () {
+                deleteRow(this);
+            };
+            cell3.appendChild(deleteButton);
+
+
+
+        }
+        function deleteRow(button) {
+            const row = button.parentNode.parentNode; // Obtén la fila que contiene el botón
+
+            const table = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length; // Cuenta el número de filas en la tabla
+
+            if (rowCount > 1 && row.rowIndex > 0) { // Asegúrate de que no sea la primera fila
+                table.deleteRow(row.rowIndex - 1); // Elimina la fila seleccionada
+
+                // Mueve el botón de "Agregar" después de la última fila restante
+                const addButton = document.getElementById('addButton');
+                table.parentNode.appendChild(addButton);
+            } else {
+                alert("No se puede eliminar la primera fila."); // Opcional: Alerta si se intenta eliminar la primera fila
+            }
+        }
+
+        function showAltFlow() {
+            // Muestra el contenedor del flujo alternativo
+            const altFlowContainer = document.getElementById('altFlowContainer');
+            altFlowContainer.style.display = 'block';
+        }
+
+        function addAltRow() {
+            // Selecciona la tabla de flujo alternativo por su ID
+            const table = document.getElementById('altFlowTable').getElementsByTagName('tbody')[0];
+
+            // Inserta una nueva fila al final de la tabla
+            const newRow = table.insertRow();
+
+            // Inserta dos celdas en la nueva fila
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2); // Nueva celda para el botón de eliminar
+
+            // Crea los textarea para cada celda
+            const textArea1 = document.createElement('textarea');
+            textArea1.className = 'textarea'
+            textArea1.placeholder = 'Describa los pasos realizados...';
+            cell1.appendChild(textArea1);
+
+            const textArea2 = document.createElement('textarea');
+            textArea2.className = 'textarea'
+            textArea2.placeholder = 'Proporcione información adicional para los pasos...';
+            cell2.appendChild(textArea2);
+
+            // Crea el botón de eliminar como un icono de basura
+            const deleteButton = document.createElement('button');
+            deleteButton.innerHTML = '<i class="fas fa-trash"></i>'; // Icono de basura
+            deleteButton.onclick = function () {
+                deleteRowAlt(this); // Pasa el botón como referencia a la función deleteRowAlt
+            };
+            cell3.appendChild(deleteButton);
+
+            // Mueve el botón de "Agregar Paso Alternativo" después de la nueva fila
+            const addAltRowButton = document.getElementById('addAltRowButton');
+            table.parentNode.appendChild(addAltRowButton);
+        }
+
+        function deleteRowAlt(button) {
+            const row = button.parentNode.parentNode; // Obtén la fila que contiene el botón
+
+            const table = document.getElementById('altFlowTable').getElementsByTagName('tbody')[0];
+            table.deleteRow(row.rowIndex - 1); // Elimina la fila seleccionada
+
+            // Mueve el botón de "Agregar Paso Alternativo" después de la última fila restante
+            const addAltRowButton = document.getElementById('addAltRowButton');
+            table.parentNode.appendChild(addAltRowButton);
+        }
+
+        function printDocument() {
+            window.print();
+        }
+
+    </script>
+</body>
+</html>
